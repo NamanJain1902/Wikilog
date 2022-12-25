@@ -2,7 +2,7 @@
 
 
 ## Instructions
-1. Install dependencies bu running 
+1. Install dependencies by running 
 ```python
 $ python3 install -r requirements.txt
 ```
