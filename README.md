@@ -16,11 +16,12 @@ $ python3 manage.py runserver
 
 > http://127.0.0.1:8000/country_info/India
 
-<img src="./assets/india.png" alt="result for India"/>
+![assets/india.png](https://github.com/NamanJain1902/Wikilog/blob/main/assets/india.png?raw=true)
 
 <br/>
 
 > http://127.0.0.1:8000/country_info/South_Africa
 
-<img src="./assets/south_africa.png" alt="result for South_Africa"/>
+
+![assets/south_africa.png](https://github.com/NamanJain1902/Wikilog/blob/main/assets/south_africa.png?raw=true)
 
