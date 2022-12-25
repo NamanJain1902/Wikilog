@@ -71,13 +71,18 @@ def fetchData(country):
                         if t is not None:
                             largest_cities.append(t)
 
-        elif "official languages" in headers:
-            print("official_languages")
-            all_a = l[1].find_all('a')
-            for a in all_a:
-                t = a.attrs.get('title')
-                if t is not None:
-                    official_languages.append(t)
+            x = all_tr[idx]
+            y = list(x.children)
+            for language in y[1].find_all('a'):
+                if language.attrs.get('title') is not None and bool(re.search('\d', language.text)) is False:
+                    official_languages.append(language.text)
+
+        # elif "official languages" in headers:
+        #     all_a = l[1].find_all('a')
+        #     for a in all_a:
+        #         t = a.attrs.get('title')
+        #         if t is not None:
+        #             official_languages.append(t)
 
 
         elif "gdp" in headers and "nominal" in headers:
@@ -106,7 +111,6 @@ def fetchData(country):
 
 
 
-    
     d = {}
     d["flag_link"]    = get_flag_link(s)
     d["capital"]      = fix_format(capitals)
